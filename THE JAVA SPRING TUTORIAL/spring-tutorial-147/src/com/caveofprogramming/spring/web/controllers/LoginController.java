@@ -26,13 +26,11 @@ public class LoginController {
 	
 	@Autowired
 	public void setUsersService(UsersService usersService) {
-
 		this.usersService = usersService;
 	}
 
 	@RequestMapping("/login")
 	public String showLogin() {
-
 		return "login";
 	}
 	
@@ -44,20 +42,16 @@ public class LoginController {
 	
 	@RequestMapping("/admin")
 	public String showAdmin(Model model) {
-		
 		List<User> users = usersService.getAllUsers();		
-		model.addAttribute("users", users);
-		
+		model.addAttribute("users", users);		
 		return "admin";
 	}
 
-	
 	@RequestMapping("/loggedout")
 	public String showLoggedOut() {
 
 		return "loggedout";
 	}
-
 	
 	@RequestMapping("/newaccount")
 	public String showNewAccount(Model model) {
