@@ -46,10 +46,8 @@ public class OffersController {
 		
 		//offersService.throwTestException();
 		
-		List<Offer> offers = offersService.getCurrent();
-		
+		List<Offer> offers = offersService.getCurrent();		
 		model.addAttribute("offers", offers);
-		
 		return "offers";
 	}
 	

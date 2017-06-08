@@ -94,5 +94,15 @@ public class OffersDAO {
 
 				});
 	}
-	
+
+
+
+	public boolean exists(String username){
+
+		String sql = "select count(*) from users where username=:username";
+
+		return jdbc.queryForObject(sql, new 
+			MapParameterSource("“username”", username), Integer.class) > 0;
+	}
+
 }

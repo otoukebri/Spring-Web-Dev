@@ -4,30 +4,30 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
+	<head>
 
-<link href="${pageContext.request.contextPath}/static/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/static/css/main.css" rel="stylesheet" type="text/css" />
 
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<title>Insert title here</title>
-</head>
-<body>
+	<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+	<title>Insert title here</title>
+	</head>
+	<body>
 
-<table class="offers">
-<tr><td>Name</td><td>Email</td><td>Offer</td></tr>
+	<table class="offers">
+		<tr><td>Name</td><td>Email</td><td>Offer</td></tr>
 
-<c:forEach var="offer" items="${offers}">
-<tr>
+		<c:forEach var="offer" items="${offers}">
+		<tr>
 
-<td><c:out value="${offer.name}"></c:out></td>
+		<td><c:out value="${offer.name}"></c:out></td>
 
-<td><c:out value="${offer.email}"></c:out></td>
+		<td><c:out value="${offer.email}"></c:out></td>
 
-<td><c:out value="${offer.text}"></c:out></td>
-   
-</tr>
-</c:forEach>
-</table>
+		<td><c:out value="${offer.text}"></c:out></td>
+		   
+		</tr>
+		</c:forEach>
+	</table>
 
-</body>
+	</body>
 </html>
