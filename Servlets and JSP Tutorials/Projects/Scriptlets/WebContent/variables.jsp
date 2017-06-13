@@ -1,5 +1,0 @@
-<%
-
-String name = "Sue";
-
-%>
