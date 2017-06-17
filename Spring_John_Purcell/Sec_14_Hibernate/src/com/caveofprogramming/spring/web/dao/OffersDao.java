@@ -61,7 +61,6 @@ public class OffersDao {
 		return query.executeUpdate() == 1;
 	}
 
-	
 	public Offer getOffer(int id) {
 
 		Criteria crit = session().createCriteria(Offer.class);

@@ -15,10 +15,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @Repository
 @Transactional
 @Component("usersDao")
 public class UsersDao {
+
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;

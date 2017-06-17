@@ -63,7 +63,8 @@ public class LoginController {
 
 	
 	@RequestMapping(value="/createaccount", method=RequestMethod.POST)
-	public String createAccount(@Validated(FormValidationGroup.class) User user, BindingResult result) {
+	public String createAccount(@Validated(FormValidationGroup.class) User user, 
+		BindingResult result) {
 		
 		if(result.hasErrors()) {
 			return "newaccount";

@@ -72,7 +72,6 @@ public class Offer {
 	public String getUsername() {
 		return user.getUsername();
 	}
-
 	
 	@Override
 	public int hashCode() {

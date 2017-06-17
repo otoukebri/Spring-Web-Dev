@@ -13,6 +13,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import com.caveofprogramming.spring.web.validation.ValidEmail;
 
+
 @Entity
 @Table(name="users")
 public class User {
@@ -42,7 +43,6 @@ public class User {
 	public User() {
 		
 	}
-
 	
 	public User(String username, String name, String password, String email, boolean enabled,
 			String authority) {
@@ -153,7 +153,6 @@ public class User {
 			return false;
 		return true;
 	}
-
 	
 	@Override
 	public String toString() {
@@ -161,6 +160,4 @@ public class User {
 				+ name + ", enabled=" + enabled + ", authority=" + authority
 				+ "]";
 	}	
-	
-
 }
