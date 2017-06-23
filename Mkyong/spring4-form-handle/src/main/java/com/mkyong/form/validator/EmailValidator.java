@@ -2,8 +2,9 @@ package com.mkyong.form.validator;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.springframework.stereotype.Component;
+
+
 
 @Component("emailValidator")
 public class EmailValidator {
@@ -15,6 +16,7 @@ public class EmailValidator {
 			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
 	public EmailValidator() {
+
 		pattern = Pattern.compile(EMAIL_PATTERN);
 	}
 

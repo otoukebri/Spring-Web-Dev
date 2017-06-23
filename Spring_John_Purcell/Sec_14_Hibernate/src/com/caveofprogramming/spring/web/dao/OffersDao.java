@@ -17,10 +17,13 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 
+
+
 @Repository
 @Transactional
 @Component("offersDao")
 public class OffersDao {
+
 
 	@Autowired
 	private SessionFactory sessionFactory;

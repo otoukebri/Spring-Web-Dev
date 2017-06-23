@@ -23,6 +23,7 @@ public class UserFormValidator implements Validator {
 	
 	@Override
 	public boolean supports(Class<?> clazz) {
+
 		return User.class.equals(clazz);
 	}
 
@@ -63,4 +64,6 @@ public class UserFormValidator implements Validator {
 			errors.rejectValue("skill", "Valid.userForm.skill");
 		}
 	}
+
 }
+

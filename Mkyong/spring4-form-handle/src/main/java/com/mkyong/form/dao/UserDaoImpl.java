@@ -19,8 +19,10 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
-
 import com.mkyong.form.model.User;
+
+
+
 
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -28,7 +30,9 @@ public class UserDaoImpl implements UserDao {
 	NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
 	@Autowired
-	public void setNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) throws DataAccessException {
+	public void setNamedParameterJdbcTemplate(NamedParameterJdbcTemplate 
+		namedParameterJdbcTemplate) throws DataAccessException {
+
 		this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
 	}
 
@@ -41,6 +45,7 @@ public class UserDaoImpl implements UserDao {
 		String sql = "SELECT * FROM users WHERE id=:id";
 
 		User result = null;
+
 		try {
 			result = namedParameterJdbcTemplate.queryForObject(sql, params, new UserMapper());
 		} catch (EmptyResultDataAccessException e) {
@@ -55,6 +60,7 @@ public class UserDaoImpl implements UserDao {
 		return result;
 	}
 
+
 	@Override
 	public List<User> findAll() {
 
@@ -63,6 +69,7 @@ public class UserDaoImpl implements UserDao {
 
 		return result;
 	}
+
 
 	@Override
 	public void save(User user) {
@@ -76,6 +83,7 @@ public class UserDaoImpl implements UserDao {
 		user.setId(keyHolder.getKey().intValue());		
 	}
 
+
 	@Override
 	public void update(User user) {
 
@@ -85,13 +93,15 @@ public class UserDaoImpl implements UserDao {
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(user));
 	}
 
+
 	@Override
 	public void delete(Integer id) {
 
 		String sql = "DELETE FROM USERS WHERE id= :id";
-		namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource("id", id));
 
+		namedParameterJdbcTemplate.update(sql, new MapSqlParameterSource("id", id));
 	}
+
 
 	private SqlParameterSource getSqlParameterByModel(User user) {
 
@@ -117,10 +127,13 @@ public class UserDaoImpl implements UserDao {
 		return paramSource;
 	}
 
+
 	private static final class UserMapper implements RowMapper<User> {
 
 		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+
 			User user = new User();
+
 			user.setId(rs.getInt("id"));
 			user.setName(rs.getString("name"));
 			user.setEmail(rs.getString("email"));
@@ -132,20 +145,24 @@ public class UserDaoImpl implements UserDao {
 			user.setPassword(rs.getString("password"));
 			user.setSex(rs.getString("sex"));
 			user.setSkill(convertDelimitedStringToList(rs.getString("skill")));
+
 			return user;
 		}
 	}
+
 
 	private static List<String> convertDelimitedStringToList(String delimitedString) {
 
 		List<String> result = new ArrayList<String>();
 
 		if (!StringUtils.isEmpty(delimitedString)) {
+
 			result = Arrays.asList(StringUtils.delimitedListToStringArray(delimitedString, ","));
 		}
 		
 		return result;
 	}
+
 
 	private String convertListToDelimitedString(List<String> list) {
 
@@ -156,4 +173,7 @@ public class UserDaoImpl implements UserDao {
 		}
 		return result;
 	}
+
 }
+
+

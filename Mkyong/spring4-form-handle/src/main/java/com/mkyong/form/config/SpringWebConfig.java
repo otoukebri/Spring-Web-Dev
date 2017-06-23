@@ -26,7 +26,9 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
 	public InternalResourceViewResolver viewResolver() {
+
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+
 		viewResolver.setViewClass(JstlView.class);
 		viewResolver.setPrefix("/WEB-INF/views/jsp/");
 		viewResolver.setSuffix(".jsp");
@@ -35,9 +37,10 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
 	public ResourceBundleMessageSource messageSource() {
+
 		ResourceBundleMessageSource rb = new ResourceBundleMessageSource();
 		rb.setBasenames(new String[] { "messages/messages", "messages/validation" });
 		return rb;
 	}
-
+	
 }

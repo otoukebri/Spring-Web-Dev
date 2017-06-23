@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.mkyong.form.dao.UserDao;
 import com.mkyong.form.model.User;
 
+
 @Service("userService")
 public class UserServiceImpl implements UserService {
 
@@ -36,7 +37,6 @@ public class UserServiceImpl implements UserService {
 		} else {
 			userDao.update(user);
 		}
-
 	}
 
 	@Override

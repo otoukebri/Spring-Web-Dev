@@ -11,6 +11,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
+
 @Configuration
 public class SpringDBConfig {
 
@@ -43,5 +44,4 @@ public class SpringDBConfig {
 		// "jdbc:hsqldb:mem:testdb", "--user", "sa", "--password", "" });
 
 	}
-
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.mkyong.form.model.User;
 
+
 public interface UserService {
 
 	User findById(Integer id);

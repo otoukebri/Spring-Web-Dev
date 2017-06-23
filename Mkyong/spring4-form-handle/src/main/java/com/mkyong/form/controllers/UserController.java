@@ -31,6 +31,8 @@ import com.mkyong.form.service.UserService;
 import com.mkyong.form.validator.UserFormValidator;
 //import javax.validation.Valid;
 
+
+
 //http://www.tikalk.com/redirectattributes-new-feature-spring-mvc-31/
 //https://en.wikipedia.org/wiki/Post/Redirect/Get
 //http://www.oschina.net/translate/spring-mvc-flash-attribute-example
@@ -110,6 +112,7 @@ public class UserController {
 		user.setName("mkyong123");
 		user.setEmail("test@gmail.com");
 		user.setAddress("abc 88");
+
 		//user.setPassword("123");
 		//user.setConfirmPassword("123");
 		user.setNewsletter(true);
@@ -184,6 +187,7 @@ public class UserController {
 		frameworksList.add("Apache Wicket");
 		model.addAttribute("frameworkList", frameworksList);
 
+
 		Map<String, String> skill = new LinkedHashMap<String, String>();
 		skill.put("Hibernate", "Hibernate");
 		skill.put("Spring", "Spring");
@@ -191,6 +195,7 @@ public class UserController {
 		skill.put("Groovy", "Groovy");
 		skill.put("Grails", "Grails");
 		model.addAttribute("javaSkillList", skill);
+
 
 		List<Integer> numbers = new ArrayList<Integer>();
 		numbers.add(1);
@@ -200,11 +205,13 @@ public class UserController {
 		numbers.add(5);
 		model.addAttribute("numberList", numbers);
 
+
 		Map<String, String> country = new LinkedHashMap<String, String>();
 		country.put("US", "United Stated");
 		country.put("CN", "China");
 		country.put("SG", "Singapore");
 		country.put("MY", "Malaysia");
+
 		model.addAttribute("countryList", country);
 	}
 
@@ -219,5 +226,5 @@ public class UserController {
 		model.addObject("msg", "user not found");
 
 		return model;
-	}
+	}		
 }
