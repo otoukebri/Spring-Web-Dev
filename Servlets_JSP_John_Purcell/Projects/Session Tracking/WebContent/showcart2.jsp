@@ -14,7 +14,5 @@
 
 Items in cart:  <%= cart == null ? "error" : cart.getTotalItems() %>
 
-
-
 </body>
 </html>
