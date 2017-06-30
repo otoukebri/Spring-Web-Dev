@@ -16,10 +16,14 @@ import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 
+
+
+
 /**
  * Servlet implementation class Uploader
  */
 public class Uploader extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -41,6 +45,7 @@ public class Uploader extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		PrintWriter out = response.getWriter();
 		
 		if(!ServletFileUpload.isMultipartContent(request)) {
@@ -52,6 +57,7 @@ public class Uploader extends HttpServlet {
 		ServletFileUpload upload = new ServletFileUpload(itemFactory);
 		
 		try {
+
 			List<FileItem> items = upload.parseRequest(request);
 			
 			for(FileItem item: items) {

@@ -127,7 +127,6 @@ public class UserDaoImpl implements UserDao {
 		return paramSource;
 	}
 
-
 	private static final class UserMapper implements RowMapper<User> {
 
 		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -150,7 +149,6 @@ public class UserDaoImpl implements UserDao {
 		}
 	}
 
-
 	private static List<String> convertDelimitedStringToList(String delimitedString) {
 
 		List<String> result = new ArrayList<String>();
@@ -163,7 +161,6 @@ public class UserDaoImpl implements UserDao {
 		return result;
 	}
 
-
 	private String convertListToDelimitedString(List<String> list) {
 
 		String result = "";
@@ -173,7 +170,6 @@ public class UserDaoImpl implements UserDao {
 		}
 		return result;
 	}
-
 }
 
 

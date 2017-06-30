@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
 <form action="/Forms/Controller" method="post">
 
 <input type="text" name="email" />

@@ -11,6 +11,7 @@
 <jsp:useBean id="user1" class="beans.User" scope="session"></jsp:useBean>
 <jsp:setProperty name="user1" property="*" />
 
+
 <%
 	String action = request.getParameter("action");
 
@@ -25,9 +26,11 @@
 
 <h2><jsp:getProperty name="user1" property="message" /></h2>
 
+
 <form action="/Forms/selfvalidatingform.jsp" method="post"><input
 	type="hidden" name="action" value="formsubmit" /> <input type="text"
 	name="email" value="<jsp:getProperty name="user1" property="email" />" /><br />
+
 <input type="text" name="password"
 	value="<jsp:getProperty name="user1" property="password" />" /><br />
 

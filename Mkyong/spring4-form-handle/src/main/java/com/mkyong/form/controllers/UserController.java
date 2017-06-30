@@ -56,6 +56,7 @@ public class UserController {
 		this.userService = userService;
 	}
 
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Model model) {
 		logger.debug("index()");
@@ -129,6 +130,7 @@ public class UserController {
 		return "users/userform";
 	}
 
+
 	// show update form
 	@RequestMapping(value = "/users/{id}/update", method = RequestMethod.GET)
 	public String showUpdateUserForm(@PathVariable("id") int id, Model model) {
@@ -185,6 +187,7 @@ public class UserController {
 		frameworksList.add("GWT");
 		frameworksList.add("Play");
 		frameworksList.add("Apache Wicket");
+
 		model.addAttribute("frameworkList", frameworksList);
 
 
@@ -194,6 +197,7 @@ public class UserController {
 		skill.put("Struts", "Struts");
 		skill.put("Groovy", "Groovy");
 		skill.put("Grails", "Grails");
+
 		model.addAttribute("javaSkillList", skill);
 
 
@@ -203,6 +207,7 @@ public class UserController {
 		numbers.add(3);
 		numbers.add(4);
 		numbers.add(5);
+
 		model.addAttribute("numberList", numbers);
 
 
@@ -214,6 +219,7 @@ public class UserController {
 
 		model.addAttribute("countryList", country);
 	}
+
 
 	@ExceptionHandler(EmptyResultDataAccessException.class)
 	public ModelAndView handleEmptyData(HttpServletRequest req, Exception ex) {

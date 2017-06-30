@@ -21,7 +21,7 @@
 	</c:if>
 
 	<h1>User Detail</h1>
-	<br />
+	<br/>
 
 	<div class="row">
 		<label class="col-sm-2">ID</label>

@@ -1,7 +1,9 @@
 package beans;
 
 public class User {
+
 	private String email = "";
+
 	private String password = "";
 	
 	private String message = "";
@@ -63,5 +65,4 @@ public class User {
 		
 		return true;
 	}
-
 }

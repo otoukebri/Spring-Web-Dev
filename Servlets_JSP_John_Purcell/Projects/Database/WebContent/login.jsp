@@ -49,17 +49,14 @@ table {
 <input type="hidden" name="action" value="dologin" />
 
 <table>
-
-<tr><td class="align-right">Email address: </td><td><input type="text" name="email" value="<%= request.getAttribute("email") %>"/></td></tr>
-<tr><td class="align-right">Password: </td><td><input type="password" name="password" value="<%= request.getAttribute("password") %>"/></td></tr>
-<tr><td class="align-right" colspan="2"><input type="submit" value="Log in"/></td></tr>
-
+	<tr><td class="align-right">Email address: </td><td><input type="text" name="email" value="<%= request.getAttribute("email") %>"/></td></tr>
+	<tr><td class="align-right">Password: </td><td><input type="password" name="password" value="<%= request.getAttribute("password") %>"/></td></tr>
+	<tr><td class="align-right" colspan="2"><input type="submit" value="Log in"/></td></tr>
 </table>
 
 <p class="login-error"><%= request.getAttribute("message") %></p>
 
 </form>
-
 </div>
 
 

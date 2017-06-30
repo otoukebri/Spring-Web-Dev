@@ -2,11 +2,13 @@ package controller;
 
 import java.io.IOException;
 
+
 /**
  * Servlet implementation class for Servlet: Attributes
  *
  */
- public class Attributes extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
+public class Attributes extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
+   
    static final long serialVersionUID = 1L;
    
     /* (non-Java-doc)

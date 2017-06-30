@@ -14,6 +14,5 @@
 
 <p><a href="/MVC/Controller?action=about">Go to about page.</a></p>
 
-
 </body>
 </html>

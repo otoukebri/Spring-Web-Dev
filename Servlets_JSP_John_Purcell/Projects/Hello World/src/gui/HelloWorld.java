@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
 /**
  * Servlet implementation class for Servlet: HelloWorld
  *
@@ -40,6 +42,7 @@ public class HelloWorld extends javax.servlet.http.HttpServlet implements javax.
 		out.println("<strong>Hello</strong>");
 		out.println("</html>");
 	}  	
+
 
 	/* (non-Java-doc)
 	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

@@ -7,8 +7,8 @@
 
 <jsp:include page="fragments/header.jsp" />
 
-<body>
 
+<body>
 	<div class="container">
 		
 		<h1>Error Page</h1>
@@ -20,6 +20,5 @@
 	  	-->
 	</div>
 	<jsp:include page="fragments/footer.jsp" />
-
 </body>
 </html>

@@ -6,6 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
+
 /**
  * Servlet implementation class for Servlet: Controller
  *
@@ -37,9 +40,11 @@ public class Controller extends javax.servlet.http.HttpServlet implements javax.
 		else if(action.equals("about")) {
 			page = "/about.jsp";
 		}
+
 		else if(action.equals("login")) {
 			page = "/login.jsp";
 		}
+		
 		else {
 			page = "/error.jsp";
 		}

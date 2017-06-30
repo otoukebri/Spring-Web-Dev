@@ -14,8 +14,6 @@
 <spring:url value="/" var="urlHome" />
 <spring:url value="/users/add" var="urlAddUser" />
 
-
-
 <nav class="navbar navbar-inverse ">
 
 	<div class="container">
@@ -29,5 +27,4 @@
 			</ul>
 		</div>
 	</div>
-
 </nav>

@@ -25,6 +25,7 @@ import database.Account;
  */
 @WebServlet("/Controller")
 public class Controller extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
 
 	private DataSource ds;
@@ -37,11 +38,14 @@ public class Controller extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
+
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
+
 		try {
+
 			InitialContext initContext = new InitialContext();
 
 			Context env = (Context) initContext.lookup("java:comp/env");
@@ -66,12 +70,14 @@ public class Controller extends HttpServlet {
 		if (action == null) {
 			request.getRequestDispatcher("/index.jsp").forward(request, response);
 		}
+
 		else if(action.equals("login")) {
 			request.setAttribute("email", "");
 			request.setAttribute("password", "");
 			request.setAttribute("message", "");
 			request.getRequestDispatcher("/login.jsp").forward(request, response);
 		}
+
 		else if(action.equals("createaccount")) {
 			request.setAttribute("email", "");
 			request.setAttribute("password", "");
@@ -79,11 +85,13 @@ public class Controller extends HttpServlet {
 			request.setAttribute("message", "");
 			request.getRequestDispatcher("/createaccount.jsp").forward(request, response);
 		}
+
 		else {
 			out.println("unrecognised action");
 			return;
 		}
 	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
@@ -114,8 +122,10 @@ public class Controller extends HttpServlet {
 		}
 
 		Account account = new Account(conn);
+
 		
 		if(action.equals("dologin")) {
+
 			String email = request.getParameter("email");
 			String password = request.getParameter("password");
 			
@@ -125,6 +135,7 @@ public class Controller extends HttpServlet {
 			request.setAttribute("password", "");
 			
 			try {
+
 				if(account.login(email, password)) {
 					request.getRequestDispatcher("/loginsuccess.jsp").forward(request, response);
 				}
@@ -135,10 +146,12 @@ public class Controller extends HttpServlet {
 			} catch (SQLException e) {
 				request.setAttribute("email", "Database error: please try again later.");
 				request.getRequestDispatcher("/newaccount.jsp").forward(request, response);
-			}
-			
+			}			
 		}
+
+
 		else if(action.equals("createaccount")) {
+
 			String email = request.getParameter("email");
 			String password = request.getParameter("password");
 			String repeatPassword = request.getParameter("repeatpassword");
@@ -153,6 +166,7 @@ public class Controller extends HttpServlet {
 				request.setAttribute("message", "Passwords do not match.");
 				request.getRequestDispatcher("/createaccount.jsp").forward(request, response);
 			}
+
 			else {
 				User user = new User(email, password);
 				
@@ -161,6 +175,7 @@ public class Controller extends HttpServlet {
 					request.setAttribute("message", user.getMessage());
 					request.getRequestDispatcher("/createaccount.jsp").forward(request, response);
 				}
+
 				else {
 					try {
 						if(account.exists(email)) {
@@ -168,6 +183,7 @@ public class Controller extends HttpServlet {
 							request.setAttribute("message", "An account with this email address already exists");
 							request.getRequestDispatcher("/createaccount.jsp").forward(request, response);
 						}
+
 						else {
 							// We create create the account.
 							account.create(email, password);
@@ -181,6 +197,7 @@ public class Controller extends HttpServlet {
 				
 			}
 		}
+
 		else {
 			out.println("unrecognised action");
 		}
@@ -196,5 +213,4 @@ public class Controller extends HttpServlet {
 	public void createAccount() {
 		
 	}
-
 }

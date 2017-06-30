@@ -1,12 +1,11 @@
 package beans;
 
 public class User {
+
 	private String name;
 	private int id;
 	
-	public User() {
-		
-	}
+	public User() { }
 
 	public User(String name, int id) {
 		super();
@@ -29,5 +28,4 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
-
 }

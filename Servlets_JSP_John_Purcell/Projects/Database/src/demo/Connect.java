@@ -12,11 +12,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  * Servlet implementation class Connect
  */
 @WebServlet("/Connect")
 public class Connect extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -26,6 +28,7 @@ public class Connect extends HttpServlet {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -66,6 +69,7 @@ public class Connect extends HttpServlet {
 		}
 	}
 
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -74,5 +78,4 @@ public class Connect extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
-
 }

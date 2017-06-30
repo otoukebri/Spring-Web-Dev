@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/Test")
 public class Test extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -21,13 +22,13 @@ public class Test extends HttpServlet {
      */
     public Test() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		PrintWriter out = response.getWriter();
 		
 		out.println("Hello");
@@ -39,5 +40,4 @@ public class Test extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
-
 }

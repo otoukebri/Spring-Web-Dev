@@ -38,8 +38,10 @@ public class Account {
 			return true;
 		}
 	}
+
 	
 	public void create(String email, String password) throws SQLException {
+
 		String sql = "insert into users (email, password) values (?, ?)";
 
 		PreparedStatement stmt = conn.prepareStatement(sql);

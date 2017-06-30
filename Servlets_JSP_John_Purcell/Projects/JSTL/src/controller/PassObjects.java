@@ -15,23 +15,16 @@ import javax.servlet.http.HttpSession;
 
 import beans.User;
 
-/**
- * Servlet implementation class PassObjects
- */
+
+
 public class PassObjects extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public PassObjects() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// Demonstrate passing scoped objects
@@ -46,6 +39,7 @@ public class PassObjects extends HttpServlet {
 		
 		ServletContext context = getServletContext();
 		context.setAttribute("user3", user3);
+
 		
 		// This is to demo accessing maps in EL
 		Map<String, String> map = new HashMap<>();
@@ -55,18 +49,20 @@ public class PassObjects extends HttpServlet {
 		request.setAttribute("map1", map);
 		
 		request.setAttribute("link", "<a href='something.com'>Click here</a>");
+
 		
 		// We can also iterate over lists using forEach in JSTL.
 		List<User> list1 = new ArrayList<>();
+
 		list1.add(new User("fox", 1));
 		list1.add(new User("bear", 2));
 		list1.add(new User("cat", 3));
 		
 		session.setAttribute("list1", list1);
-		
-		
+				
 		request.getRequestDispatcher("/receiveObjects.jsp").forward(request, response);
 	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -74,5 +70,4 @@ public class PassObjects extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
-
 }

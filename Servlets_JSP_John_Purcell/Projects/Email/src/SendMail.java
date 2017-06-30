@@ -14,6 +14,7 @@ import javax.mail.internet.MimeMessage;
 public class SendMail {
 
 	public static void main(String[] args) {
+
 		Properties props = new Properties();
 		
 		props.setProperty("mail.host", "mail.caveofprogramming.com");

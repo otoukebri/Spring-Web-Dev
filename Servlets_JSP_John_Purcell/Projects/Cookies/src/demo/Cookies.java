@@ -9,10 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  * Servlet implementation class Cookies
  */
 public class Cookies extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -38,11 +40,15 @@ public class Cookies extends HttpServlet {
 
 		if (cookies == null) {
 			out.println("No cookies found<br/>");
-		} else {
+		} 
+
+		else {
+
 			for (Cookie retrievedCookie : cookies) {
+
 				String name = retrievedCookie.getName();
 				String value = retrievedCookie.getValue();
-
+				
 				out.println(name + " = " + value + "<br/>");
 			}
 		}
@@ -56,16 +62,16 @@ public class Cookies extends HttpServlet {
 		out.println("Cookie set.<br/>");
 
 		out.println("</html>");
-
 	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
 	protected void doPost(HttpServletRequest request,
+
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
-
 }

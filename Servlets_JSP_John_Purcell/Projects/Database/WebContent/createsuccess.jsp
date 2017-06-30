@@ -9,7 +9,6 @@
 
 <style  type="text/css">
 
-
 #message {
 	position: relative;
 	top: 100px;

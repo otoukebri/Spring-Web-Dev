@@ -19,8 +19,10 @@ import org.springframework.web.servlet.view.JstlView;
 		"com.mkyong.form.exception", "com.mkyong.form.validator" })
 public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
+
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
 
@@ -32,6 +34,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 		viewResolver.setViewClass(JstlView.class);
 		viewResolver.setPrefix("/WEB-INF/views/jsp/");
 		viewResolver.setSuffix(".jsp");
+
 		return viewResolver;
 	}
 
@@ -40,7 +43,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
 		ResourceBundleMessageSource rb = new ResourceBundleMessageSource();
 		rb.setBasenames(new String[] { "messages/messages", "messages/validation" });
+
 		return rb;
-	}
-	
+	}	
 }

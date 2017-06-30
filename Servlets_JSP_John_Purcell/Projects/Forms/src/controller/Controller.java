@@ -8,12 +8,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  * Servlet implementation class for Servlet: Controller
  * 
  */
 public class Controller extends javax.servlet.http.HttpServlet implements
 		javax.servlet.Servlet {
+
 	static final long serialVersionUID = 1L;
 
 	/*
@@ -25,6 +27,7 @@ public class Controller extends javax.servlet.http.HttpServlet implements
 		super();
 	}
 
+
 	/*
 	 * (non-Java-doc)
 	 * 
@@ -33,6 +36,7 @@ public class Controller extends javax.servlet.http.HttpServlet implements
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+
 		PrintWriter out = response.getWriter();
 
 		String email = request.getParameter("email");
@@ -42,6 +46,7 @@ public class Controller extends javax.servlet.http.HttpServlet implements
 		out.write("</html>");
 	}
 
+
 	/*
 	 * (non-Java-doc)
 	 * 
@@ -50,6 +55,7 @@ public class Controller extends javax.servlet.http.HttpServlet implements
 	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+
 		PrintWriter out = response.getWriter();
 
 		String email = request.getParameter("email");

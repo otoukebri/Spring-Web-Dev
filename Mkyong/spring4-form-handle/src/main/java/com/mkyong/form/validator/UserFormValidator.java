@@ -10,6 +10,7 @@ import org.springframework.validation.Validator;
 import com.mkyong.form.model.User;
 import com.mkyong.form.service.UserService;
 
+
 //http://docs.spring.io/spring/docs/current/spring-framework-reference/html/validation.html#validation-mvc-configuring
 @Component
 public class UserFormValidator implements Validator {
@@ -26,6 +27,7 @@ public class UserFormValidator implements Validator {
 
 		return User.class.equals(clazz);
 	}
+
 
 	@Override
 	public void validate(Object target, Errors errors) {

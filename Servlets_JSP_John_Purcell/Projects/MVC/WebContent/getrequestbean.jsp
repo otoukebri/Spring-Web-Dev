@@ -9,7 +9,6 @@
 <body>
 
 
-<!-- Won't work: bean has page scope -->
 <jsp:useBean id="user3" class="beans.User" scope="request"></jsp:useBean>
 
 Email: <%= user3.getEmail() %>

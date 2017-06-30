@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
 <div class="headerWrapper">
 	<div class="header">
 		<img src="${pageContext.request.contextPath}/images/logo.png" />

@@ -6,10 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
+
 <body>
-
-
-<!-- Won't work: bean has page scope -->
 <jsp:useBean id="user2" class="beans.User" scope="page"></jsp:useBean>
 
 Email: <%= user2.getEmail() %>

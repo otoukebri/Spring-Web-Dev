@@ -17,11 +17,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+
 /**
  * Servlet implementation class DatasourceDemo
  */
 @WebServlet("/DatasourceDemo")
 public class DatasourceDemo extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
 	
 	private DataSource ds;
@@ -30,6 +32,7 @@ public class DatasourceDemo extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public DatasourceDemo() {
+
         super();
         // TODO Auto-generated constructor stub
     }
